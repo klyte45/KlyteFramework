@@ -68,8 +68,11 @@
     <Compile Include="commons\Extensors\UI\UITabstripAutoResize.cs" />
     <Compile Include="commons\Interfaces\BasicIUserMod.cs" />
     <Compile Include="commons\Interfaces\BasicIUserModSimplified.cs" />
+    <Compile Include="commons\Interfaces\IIdentifiable.cs" />
     <Compile Include="commons\Interfaces\ILibable.cs" />
+    <Compile Include="commons\Interfaces\ITimeable.cs" />
     <Compile Include="commons\Interfaces\TextureAtlasDescriptor.cs" />
+    <Compile Include="commons\Redirectors\UIDynamicFontRendererRedirector.cs" />
     <Compile Include="commons\TextureAtlas\CommonTextureAtlas.cs" />
     <Compile Include="commons\Tools\BasicBuildingTool.cs" />
     <Compile Include="commons\Tools\BasicNetTool.cs" />
@@ -91,6 +94,7 @@
     <Compile Include="commons\Utils\PastelConfig.cs" />
     <Compile Include="commons\Utils\RandomPastelColorGenerator.cs" />
     <Compile Include="commons\Utils\ReflectionUtils.cs" />
+    <Compile Include="commons\Utils\RenderUtils.cs" />
     <Compile Include="commons\Utils\ResourceLoader.cs" />
     <Compile Include="commons\Utils\RoadSearchUtils.cs" />
     <Compile Include="commons\Utils\SegmentUtils.cs" />
@@ -102,9 +106,15 @@
     <Compile Include="commons\Utils\StructExtensions\NetSegmentExtensions.cs" />
     <Compile Include="commons\Utils\StructExtensions\Vector2Extensions.cs" />
     <Compile Include="commons\Utils\StructExtensions\Vector3Extensions.cs" />
+    <Compile Include="commons\Utils\TextureAtlasUtils.cs" />
+    <Compile Include="commons\Utils\TextureScaler.cs" />
     <Compile Include="commons\Utils\UtilitiesClasses\CardinalPoint .cs" />
+    <Compile Include="commons\Utils\UtilitiesClasses\ColorList.cs" />
+    <Compile Include="commons\Utils\UtilitiesClasses\LibableList.cs" />
+    <Compile Include="commons\Utils\UtilitiesClasses\NonSequentialList.cs" />
     <Compile Include="commons\Utils\UtilitiesClasses\NumberArrays.cs" />
     <Compile Include="commons\Utils\UtilitiesClasses\Range.cs" />
+    <Compile Include="commons\Utils\UtilitiesClasses\TimeableList.cs" />
     <Compile Include="commons\Utils\UtilitiesClasses\Tuple.cs" />
     <Compile Include="commons\Utils\VehicleUtils.cs" />
     <Compile Include="commons\Utils\XmlUtils.cs" />
@@ -136,7 +146,6 @@
     <Reference Include="ICities">
       <HintPath>S:\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\ICities.dll</HintPath>
     </Reference>
-    <Reference Include="Mono.Posix, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL" />
     <Reference Include="PopsApiWrapper">
       <HintPath>S:\Steam\steamapps\common\Cities_Skylines\Cities_Data\Managed\PopsApiWrapper.dll</HintPath>
     </Reference>
@@ -167,11 +176,11 @@
   <PropertyGroup>
     <PostBuildEvent>xcopy /Y "$(TargetPath)" "$(ProjectDir)\_requiredDLLs"
 xcopy /Y "$(TargetDir)0Harmony.dll" "$(ProjectDir)\_requiredDLLs\"
-rem xcopy /Y "$(ProjectDir)\_requiredDLLs\*" "S:\Steam\steamapps\workshop\content\255710\xxxxx\"
+copy /Y "$(ProjectDir)\_requiredDLLs\*" "S:\Steam\steamapps\workshop\content\255710\1859100867\"
 xcopy /Y "$(ProjectDir)\_requiredDLLs\*" "C:\Users\Leandro\AppData\Local\Colossal Order\Cities_Skylines\Addons\Mods\KF\"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <PreBuildEvent>rem del /q "S:\Steam\steamapps\workshop\content\255710\xxxx"
+    <PreBuildEvent>del /q "S:\Steam\steamapps\workshop\content\255710\1859100867"
 del /q "$(ProjectDir)\_requiredDLLs"</PreBuildEvent>
   </PropertyGroup>
 </Project>

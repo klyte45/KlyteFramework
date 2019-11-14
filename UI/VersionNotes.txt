@@ -1,2 +1,5 @@
-﻿KFv1
-	- Initial Release
+﻿KFv1.1
+	- Added texture atlas engine (import/export images to game image bundle)
+	- Added Text-in-inline-texture feature
+
+Check Github page for details! A shortcut button is placed at mod options menu.
