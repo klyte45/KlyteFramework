@@ -12,7 +12,7 @@ using System.Reflection;
 using UnityEngine;
 using static ColossalFramework.UI.UITextureAtlas;
 
-[assembly: AssemblyVersion("1.1.0.0")]
+[assembly: AssemblyVersion("1.1.0.1")]
 namespace Klyte.Framework
 {
     public class KlyteFramework : BasicIUserModSimplified<KlyteFramework, KFResourceLoader, MonoBehaviour>
