@@ -12,7 +12,7 @@ By default, all entries are prefixed with `K45_` string. To avoid it (to overrid
 ### Per asset file addition
 
 Any asset can create new items inside game default texture atlas, for use in UI as example. Add a folder called `kf_imageFiles` in the workshop export folder and put all images in **PNG format** inside.
-By default, all sprite entries are prefixed with `K45_PACK.{workshopId_17digits}_`, this is used to prevent collision between asset images. If you **REALLY** want to use the name as is, put a `%` symbol in the start of the name.
+By default, all sprite entries are prefixed with `K45_PACK.{workshopId}_`, this is used to prevent collision between asset images. If you **REALLY** want to use the name as is, put a `%` symbol in the start of the name.
 
 
 #### Image borders configurations 
