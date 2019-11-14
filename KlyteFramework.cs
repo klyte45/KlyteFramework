@@ -12,7 +12,7 @@ using System.Reflection;
 using UnityEngine;
 using static ColossalFramework.UI.UITextureAtlas;
 
-[assembly: AssemblyVersion("1.1.0.1")]
+[assembly: AssemblyVersion("1.1.0.2")]
 namespace Klyte.Framework
 {
     public class KlyteFramework : BasicIUserModSimplified<KlyteFramework, KFResourceLoader, MonoBehaviour>
@@ -87,6 +87,7 @@ namespace Klyte.Framework
                     LogUtils.DoErrorLog($"An error occurred trying to load path \"{path}\": {e.GetType()} => {e.Message}");
                 }
             });
+            FileUtils.EnsureFolderCreation(m_localImageFilesPath);
             TextureAtlasUtils.LoadPathTexturesIntoInGameTextureAtlas($"KF_LOCAL", m_localImageFilesPath, ref newSprites);
             if (newSprites.Count > 0)
             {
